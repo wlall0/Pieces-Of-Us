@@ -531,6 +531,14 @@ body {
   opacity: .55;
   pointer-events: none;
 }
+@media (max-width: 520px) {
+  .page-num {
+    font-size: .5rem;
+    top: 1px;
+    right: 4px;
+    opacity: .4;
+  }
+}
 
 .orn {
   display: flex;
