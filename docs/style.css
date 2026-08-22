@@ -16,8 +16,7 @@
 [dir="rtl"],
 .hero-ar,
 .brand-ar,
-.prose-ar,
-.closing-final-ar {
+.prose-ar {
   font-family: var(--font-ar);
 }
 
@@ -444,17 +443,6 @@ body {
 }
 #pdf-build .illu-img { display: block; margin: 12px auto; max-width: 62%; max-height: 260px; border-radius: 10px; }
 #pdf-build .pg { position: relative; }
-#pdf-build .pg.closing::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 40%;
-  background: url("assets/art-band.png") center bottom / cover no-repeat;
-  opacity: .6;
-}
-#pdf-build .pg.coverpg::after { display: none; }
 #pdf-build .page-inner { position: relative; z-index: 1; }
 #pdf-build .pnum {
   position: absolute;
@@ -579,37 +567,11 @@ body {
   background-repeat: no-repeat;
 }
 
-/* faded artwork band across the bottom 25% of every page (background layer) */
-.book-page.closing::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 40%;
-  background: url("assets/art-band.png") center bottom / cover no-repeat;
-  opacity: .6;
-  z-index: 0;
-  pointer-events: none;
-}
-.book-page.cover::after { display: none; }
 .page-inner { position: relative; z-index: 1; }
-/* intro & closing pages */
+/* intro page */
 .prose-en { font-size: 1.03em; }
 .prose-ar { font-size: 1.12em; direction: rtl; margin-top: 16px; color: #57493a; }
 .em { font-style: italic; font-weight: bold; }
-.closing-final {
-  margin-top: 22px;
-  text-align: center;
-  font-style: italic;
-  color: var(--accent-dark);
-}
-.closing-final-ar {
-  margin-top: 10px;
-  text-align: center;
-  color: var(--accent-dark);
-  direction: rtl;
-}
 
 /* arrows */
 .nav-arrow {
