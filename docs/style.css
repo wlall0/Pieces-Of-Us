@@ -524,11 +524,12 @@ body {
 .page-inner { flex: 1; display: flex; flex-direction: column; }
 .page-num {
   position: absolute;
-  top: 14px;
-  right: 22px;
+  top: 4px;
+  right: 8px;
   z-index: 1;
-  font-size: .85rem;
-  color: var(--ink-soft);
+  font-size: .62rem;
+  opacity: .55;
+  pointer-events: none;
 }
 
 .orn {
