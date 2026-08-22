@@ -375,6 +375,19 @@ body {
 #download-book-btn:hover { border-color: var(--accent); }
 #download-book-btn:disabled { opacity: .6; cursor: wait; }
 
+#save-book-link {
+  display: block;
+  margin: 12px auto 0;
+  padding: 11px 26px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff8ec;
+  font-size: .98rem;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(176, 119, 58, .35);
+}
+
 /* ---------- offscreen PDF builder (book-sized A5 pages) ---------- */
 #pdf-build {
   position: fixed;
