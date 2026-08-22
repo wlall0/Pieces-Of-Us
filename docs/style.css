@@ -144,7 +144,7 @@ body {
 }
 
 /* ---------- hidden moon key ---------- */
-#moon-key {
+#mk {
   position: fixed;
   bottom: 16px;
   right: 18px;
@@ -157,7 +157,7 @@ body {
   transition: opacity .25s;
   -webkit-tap-highlight-color: transparent;
 }
-#moon-key:hover { opacity: .55; }
+#mk:hover { opacity: .55; }
 
 /* ---------- overlays ---------- */
 .overlay {
