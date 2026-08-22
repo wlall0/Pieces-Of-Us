@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Pieces of Us · قطع منّا</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- hidden key for the studio: tap 5 times -->
+  <button id="moon-key" aria-label="·" title="·">&#9789;</button>
+
+  <main class="page" id="collect-view">
+
+    <header class="site-header">
+      <span class="brand">Pieces of us</span>
+      <span class="brand-ar">قِصَصٌ من قلوبنا</span>
+    </header>
+
+    <section class="hero">
+      <h1>Tell us one of your stories</h1>
+      <p class="hero-ar">احكيلنا قصة من قصصك</p>
+    </section>
+
+    <form id="story-form" autocomplete="off">
+      <textarea id="story-input" rows="8"
+        placeholder="Write your story here&hellip;&#10;اكتب قصتك هنا&hellip;"></textarea>
+
+      <div class="form-footer">
+        <span id="word-counter">0 / 100 words &middot; كلمة</span>
+        <button type="submit" id="submit-btn">Share my story &middot; شاركنا قصتك</button>
+      </div>
+
+      <p id="status-message" role="status"></p>
+    </form>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Pieces of us</p>
+    </footer>
+
+  </main>
+
+  <!-- ============ BOOK MODE (public sees only the ebook) ============ -->
+  <section id="book-mode-bar" class="hidden">
+    <div class="bookmode-card">
+      <span class="bookmode-title">Pieces of us</span>
+      <span class="bookmode-sub">اقرأ الكتاب &middot; Read the book</span>
+      <button id="open-book-btn">Open the book &middot; افتح الكتاب</button>
+      <button id="download-book-btn">&#11015; Download &middot; تحميل</button>
+    </div>
+  </section>
+
+  <!-- ============ STUDIO (hidden backdoor) ============ -->
+  <div id="studio-overlay" class="overlay hidden">
+    <div class="studio-panel">
+      <header class="studio-head">
+        <h2>Studio <span>&middot; الاستوديو</span></h2>
+        <button class="icon-btn" id="studio-close" aria-label="Close">&#10005;</button>
+      </header>
+
+      <div class="toolbar">
+        <button class="tool-btn" id="btn-refresh">Refresh &middot; تحديث</button>
+        <button class="tool-btn" id="btn-all">Select all &middot; الكل</button>
+        <button class="tool-btn" id="btn-none">Clear &middot; إلغاء</button>
+        <span class="spacer"></span>
+        <label class="pick-n">#
+          <input type="number" id="pick-count" min="1" max="999" value="12">
+        </label>
+        <button class="tool-btn accent" id="btn-random">&#127922; Random pick &middot; عشوائي</button>
+      </div>
+
+      <div class="estimate-bar">
+        <span id="selected-count">Selected: 0 &middot; المحدد: ٠</span>
+        <span id="page-estimate">&asymp; 0 pages &middot; صفحة</span>
+      </div>
+
+      <ul id="story-list"></ul>
+
+      <div class="studio-actions">
+        <div class="publish-row">
+          <label class="switch">
+            <input type="checkbox" id="publish-toggle">
+            <span class="slider"></span>
+          </label>
+          <span class="publish-label">Publish mode &mdash; visitors see only the ebook
+            <span class="ar-inline">وضع النشر: الكتاب فقط للزوار</span></span>
+        </div>
+        <p id="publish-note"></p>
+        <button id="generate-btn" disabled>Generate book &middot; إنشاء الكتاب</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ BOOK ============ -->
+  <div id="book-overlay" class="overlay dark hidden">
+    <header class="book-topbar">
+      <span class="book-title">Pieces of us</span>
+      <span id="page-indicator"></span>
+      <button class="icon-btn light" id="book-close" aria-label="Close">&#10005;</button>
+    </header>
+
+    <div class="book-wrap">
+      <button class="nav-arrow left" id="prev-btn" aria-label="Previous">&#8249;</button>
+      <div id="book-stage"></div>
+      <button class="nav-arrow right" id="next-btn" aria-label="Next">&#8250;</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+  <script src="studio.js"></script>
+  <script src="book.js"></script>
+</body>
+</html>

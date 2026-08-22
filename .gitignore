@@ -1,0 +1,4 @@
+# Private by default — only the built site goes public
+/*
+!/.gitignore
+!/docs/
