@@ -636,6 +636,24 @@ body {
   .book-wrap { padding-top: 58px; }
 }
 
+.hero-art,
+.footer-art {
+  display: flex;
+  justify-content: center;
+}
+.hero-art img {
+  width: min(300px, 72%);
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(20, 12, 4, .28);
+}
+.footer-art img {
+  width: min(210px, 52%);
+  height: auto;
+  border-radius: 12px;
+  opacity: .92;
+}
+
 /* ---------------- studio unlock box ---------------- */
 .unlock-note {
   list-style: none;
